@@ -5,23 +5,4 @@ before_script:
   - export LANGUAGE=en_US:en
   - export LC_ALL=en_US.UTF-8
 
-  - pwd
-  - git clone git@git.hipac.cn:Wireless/Supported/YTScript.git
-  - ruby YTScript/before_script_executor.rb
-
-after_script:
-  - ruby YTScript/after_script_executor.rb
-
-stages:
-  - publish
-
-pod_publish:
-  stage: publish
-  only:
-    - master
-    - CI
-  script:
-    - echo 'pod_publish'
-    - ruby YTScript/pod_publish_executor.rb
-  tags:
-    - iOS
+  - echo '123'
